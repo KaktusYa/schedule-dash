@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="common/stylesheet.css">
-    <title>Hello, world!</title>
+    <title>Schedule Dash</title>
   </head>
   <body style="margin: 20px;">
     <center>
       <h1 id="digital-time">0:00</h1>
 
       <form>
-        <input type="text" name="1223" placeholder="aaa"> <input style="width: 7%;" type="text" name="1212223"><br>
-
-        <input type="text" name="1212223"> <input style="width: 7%;" type="text" name="1212223"><br>
-        <input type="text" name="1212223"> <input style="width: 7%;" type="text" name="1212223">
+        <input type="text" name="s1" placeholder="(empty)"> <input style="width: 7%;" type="text" name="s1t"><br>
+        <input type="text" name="s2" placeholder="(empty)"> <input style="width: 7%;" type="text" name="s2t"><br>
+        <input type="text" name="s3" placeholder="(empty)"> <input style="width: 7%;" type="text" name="s3t">
+      <form>
     </center>
 
     <!-- Optional JavaScript -->
