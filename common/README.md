@@ -1,0 +1,1 @@
+Files: "windows7-wall.jpg", "windows2000-wall.jpg", "windowsxp-wall.jpg" was done by Microsoft Corporation, and is taken from Microsoft Windows®.
