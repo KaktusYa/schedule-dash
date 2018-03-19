@@ -1,3 +1,7 @@
 body {
   background-image: url("windowsxp-wall.jpg");
 }
+
+#digital-time {
+	font-family: Arial;
+}
