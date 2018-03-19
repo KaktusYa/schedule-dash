@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <?php
+    <?php
         switch ($_GET['theme']) {
           case 'win2k':
             echo '<link rel="stylesheet" href="common/w2k-theme.css">';
