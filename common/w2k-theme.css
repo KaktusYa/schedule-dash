@@ -1,3 +1,7 @@
 body {
   background-image: url("windows2000-wall.jpg");
 }
+
+#digital-time {
+	font-family: Arial;
+}
