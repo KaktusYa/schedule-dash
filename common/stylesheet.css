@@ -2,21 +2,13 @@
 	font-family: Courier New;
 	font-size: 300px;
 }
-/* Старая версия (old version)
-	input[type=text] {
-	    width: 60%;
-	    padding: 12px 20px;
-	    margin: 8px 0;
-	    box-sizing: border-box;
-	    border: none;
-	    background-color: #3CBC8D;
-	    color: white;
-	}
-*/
-
 
 input[type=text] {
-	width: 60%;
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid red;
+    background-color: #3CBC8D;
+    color: white;
 }
