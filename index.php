@@ -16,9 +16,9 @@
       <h1 id="digital-time">0:00</h1>
 
       <form>
-        <input type="text" name="s1" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s1t" placeholder="00:00"><br>
-        <input type="text" name="s2" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s2t" placeholder="00:00"><br>
-        <input type="text" name="s3" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s3t" placeholder="00:00">
+        <input type="text" name="s1" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s1t" placeholder="00:00"><br>
+        <input type="text" name="s2" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s2t" placeholder="00:00"><br>
+        <input type="text" name="s3" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s3t" placeholder="00:00">
       <form>
     </center>
 
