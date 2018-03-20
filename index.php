@@ -1,6 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <?php
+        switch ($_GET['theme']) {
+          case 'win2k':
+            echo '<link rel="stylesheet" href="common/w2k-theme.css">';
+            break;
+
+          case 'winxp':
+            echo '<link rel="stylesheet" href="common/wxp-theme.css">';
+            break;
+
+          case 'win7':
+            echo '<link rel="stylesheet" href="common/w7-theme.css">';
+            break;
+
+          default:
+            echo '<link rel="stylesheet" href="common/default-theme.css">';
+            break;
+    }
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,9 +35,9 @@
       <h1 id="digital-time">0:00</h1>
 
       <form>
-        <input type="text" name="s1" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s1t" placeholder="00:00"><br>
-        <input type="text" name="s2" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s2t" placeholder="00:00"><br>
-        <input type="text" name="s3" placeholder="(empty)"> <input style="width: 4.8rem;" type="text" name="s3t" placeholder="00:00">
+        <input type="text" name="s1" placeholder="(empty)"> <input style="width: 4.9rem;" type="text" name="s1t" placeholder="00:00"><br>
+        <input type="text" name="s2" placeholder="(empty)"> <input style="width: 4.9rem;" type="text" name="s2t" placeholder="00:00"><br>
+        <input type="text" name="s3" placeholder="(empty)"> <input style="width: 4.9rem;" type="text" name="s3t" placeholder="00:00">
       <form>
     </center>
 
