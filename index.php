@@ -1,24 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <?php
-        switch ($_GET['theme']) {
-          case 'win2k':
-            echo '<link rel="stylesheet" href="common/w2k-theme.css">';
-            break;
-
-          case 'winxp':
-            echo '<link rel="stylesheet" href="common/wxp-theme.css">';
-            break;
-
-          case 'win7':
-            echo '<link rel="stylesheet" href="common/w7-theme.css">';
-            break;
-
-          default:
-            echo '<link rel="stylesheet" href="common/default-theme.css">';
-            break;
-    }
     
     <!-- Required meta tags -->
     <meta charset="utf-8">
