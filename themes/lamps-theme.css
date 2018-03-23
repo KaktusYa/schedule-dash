@@ -1,0 +1,8 @@
+body {
+    background-image: url("lamps-theme.jpg");
+}
+
+#digital-time {
+    font-family: Segoe UI;
+    font-size: 300px;
+}
