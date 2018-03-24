@@ -4,17 +4,17 @@
     
     <?php
     
-        $randomThemeInt = rand(1, 2); //random theme select
-        
-        switch($randomThemeInt) {
-            case 1:
-                echo '<link rel="stylesheet" href="themes/lamps-theme.css">';
-            break;
-                
-            case 2:
-                echo '<link rel="stylesheet" href="themes/lamps-theme.css">';
-            break;
-        }
+            $randomThemeInt = rand(1, 2);
+
+            switch($randomThemeInt) {
+                case 1:
+                    echo '<link rel="stylesheet" href="themes/lamps-theme.css">'; //theme 1..
+                break;
+
+                case 2:
+                    echo '<link rel="stylesheet" href="themes/lamps-theme.css">'; //theme 2..
+                break;
+            }
       
     ?>  
       
@@ -30,8 +30,18 @@
     <center>
       <h1 id="digital-time">...</h1>
 
-      <!-- In here must be schedule -->
-    </center>
+        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+          Test alert in 0:00
+        </div>
+
+        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+          Test alert in 0:00
+        </div>
+
+        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+          Test alert in 0:00
+        </div>        
+      </center>
       
       
     <!-- NEEDED SCRIPTS -->  
@@ -39,7 +49,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="common/scdash-time.js"></script>
+    <script src="common/javascript.js"></script>
   </body>
 </html>
 

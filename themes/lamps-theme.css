@@ -6,3 +6,21 @@ body {
     font-family: Segoe UI;
     font-size: 300px;
 }
+
+#note-schedule {
+    width: 900px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #00FF00;
+    color: white;
+    text-align: left;
+}
+
+#time-schedule {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #3CBC8D;
+    color: white;
+}
