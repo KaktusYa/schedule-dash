@@ -3,7 +3,10 @@
   <head>
  <link rel="stylesheet" href="themes/lamps-theme.css">   
     <?php
-            echo "<style>\r\n body {\r\n  background: #ffffff url(\"".(["lamps", "lake"][rand(0,1)])."-theme.jpg\") no-repeat right top fixed;\r\n    background-size: 100% 100%;\r\n }\r\n</style>";
+    foreach( new DirectoryIterator('themes') as $t ){
+      if(in_array( strtolower($t->getExtension()), ["jpg", "jpeg", "png", "svg"] )) $bg[] = $t->getPath();
+    }
+            echo "<style>\r\n body {\r\n  background: #ffffff url(\"themes/".($bg[array_rand($bg)])."\") no-repeat right top fixed;\r\n    background-size: 100% 100%;\r\n }\r\n</style>";
     ?>  
       
     <!-- META TAGS, AND MORE... -->  
