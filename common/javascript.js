@@ -23,7 +23,8 @@ function updSession(){
 			data[ parseint( it.id.slice(3) ) ]["t"] = document.getElementById("tsked" + it.id.slice(3)).t;
 		});
 	}
-	sessionStorage.setItem("shedules", JSON.stringify(data));
+	req.open("POST", "save_shedules.php?content=" + JSON.stringify(data), true);				
+	req.send();
 }
 
 function addTask(){
