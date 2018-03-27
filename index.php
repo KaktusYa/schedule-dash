@@ -39,13 +39,13 @@
 	   if( isset($tsk['n']) && isset($tsk['t']) ){
 		echo '<div class="alert alert-primary" role="alert" id="tsk'.$id.'">
           '.trim(strip_tags($tsk['n'])).' <b>in '.trim(strip_tags($tsk['t'])).'</b>
-	  <div class="button-grey green" id="ts'.$id.'" onclick="editTaskShow()">✎</div>
-	  <div class="button-grey red" id="dt'.$id.'" onclick="deleteTask()">✗</div>
+	  <div class="button-grey green" onclick="editTaskShow('.$id.')">✎</div>
+	  <div class="button-grey red" onclick="deleteTask('.$id.')">✗</div>
         </div><div class="alert alert-editor" style="display: none;" role="alert" id="tsk'.$id.'">
           <input class="input-text" type="text" placeholder="Task Name">
 	  <input class="input-select" type="time">
-	  <div class="button-grey green" id="ed'.$id.'" onclick="editTask()">✓</div>
-	  <div class="button-grey red" id="ds'.$id.'" onclick="discardChanges()">✗</div>
+	  <div class="button-grey green" onclick="editTask('.$id.')">✓</div>
+	  <div class="button-grey red" onclick="discardChanges('.$id.')">✗</div>
         </div>';
 		   
 	   }
