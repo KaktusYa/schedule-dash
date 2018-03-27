@@ -65,3 +65,12 @@ alert{
     border:none;
     border-bottom:1px solid #ccc;
 }
+
+.alert-add{
+    border: 2px dotted #e7e7e7;
+    border-radius: 5px;
+}
+
+.alert-editor{
+    //put something in...
+}
