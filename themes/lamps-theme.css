@@ -52,3 +52,16 @@ alert{
 .green{
     color: #4CAF50;
 }
+
+.input-text{
+    padding:8px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+
+.input-select{
+    padding:9px 0;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
