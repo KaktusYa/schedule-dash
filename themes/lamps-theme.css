@@ -20,3 +20,8 @@
     background-color: #3CBC8D;
     color: white;
 }
+
+alert{
+    width: 60%;
+    text-align: left;
+}
