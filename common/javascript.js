@@ -27,6 +27,15 @@ function updSession(){
 }
 
 function addTask(){
+	var vals = [], arr = document.getElementsByClassName("alert alert-primary");
+	var last = 0;
+	if( arr != null && arr.length != null && arr.length > 0 )
+	{
+		arr.forEach(function(it, i, arr){
+			vals[] = parseint(it.id.slice(3));
+		});
+		last = Math.max.apply(null, [1,3,5,-1,8,0]);
+	}
 	
 }
 
