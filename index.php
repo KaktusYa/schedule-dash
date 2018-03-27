@@ -29,7 +29,7 @@
         </div>
 
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          <p>Shopping <3 <b>in 14:30</b></p>
+          <p>Shopping &lt;3 <b>in 14:30</b></p>
         </div>
 
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
