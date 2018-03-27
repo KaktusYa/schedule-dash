@@ -27,7 +27,7 @@
 	if(isset($_SESSION['shedules'])) $tsks = @json_decode( $_SESSION['shedules'] );
     	if( (json_last_error()!==JSON_ERROR_NONE) || !is_array($tsks) || !isset($_SESSION['shedules'])){
 		$tsks = [
-		["n"=>"Buy big potatos", "t"=>"12:20"],
+		["n"=>"Buy big potatoes", "t"=>"12:20"],
 		["n"=>"Shopping", "t"=>"14:30"],
 		["n"=>"Go to meeting with friends", "t"=>"16:50"] ];
 		
@@ -36,10 +36,20 @@
 	    
 	foreach( $tsks as $tsk=>$id ){
 	 if( is_array($tsk) )	
-	   if( isset($tsk['n']) && isset($tsk['t']) )
+	   if( isset($tsk['n']) && isset($tsk['t']) ){
 		echo '<div class="alert alert-primary" role="alert" id="tsk'.$id.'">
-          <p>'.trim(strip_tags($tsk['n'])).' <b>in '.trim(strip_tags($tsk['t'])).'</b></p>
+          '.trim(strip_tags($tsk['n'])).' <b>in '.trim(strip_tags($tsk['t'])).'</b>
+	  <div class="button-grey green" id="ts'.$id.'" onclick="editTaskShow()">✎</div>
+	  <div class="button-grey red" id="dt'.$id.'" onclick="deleteTask()">✗</div>
+        </div><div class="alert alert-editor" style="display: none;" role="alert" id="tsk'.$id.'">
+          <input class="input-text" type="text" placeholder="Task Name">
+	  <input class="input-select" type="time">
+	  <div class="button-grey green" id="ed'.$id.'" onclick="editTask()">✓</div>
+	  <div class="button-grey red" id="ds'.$id.'" onclick="discardChanges()">✗</div>
         </div>';
+		   
+	   }
+		
 	}
 	
 	?>
