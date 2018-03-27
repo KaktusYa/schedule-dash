@@ -24,14 +24,14 @@
       <h1 id="digital-time">...</h1>
 
       <?php
-	if(isset($_SESSION['shedules'])) $tsks = @json_decode( $_SESSION['shedules'] );
-    	if( (json_last_error()!==JSON_ERROR_NONE) || !is_array($tsks) || !isset($_SESSION['shedules'])){
+	if(isset($_SESSION['schedules'])) $tsks = @json_decode( $_SESSION['schedules'] );
+    	if( (json_last_error()!==JSON_ERROR_NONE) || !is_array($tsks) || !isset($_SESSION['schedules'])){
 		$tsks = [
 		["n"=>"Buy big potatoes", "t"=>"12:20"],
 		["n"=>"Shopping", "t"=>"14:30"],
 		["n"=>"Go to meeting with friends", "t"=>"16:50"] ];
 		
-		$_SESSION['shedules'] = json_encode($tsks);
+		$_SESSION['schedules'] = json_encode($tsks);
 	}
 	    
 	foreach( $tsks as $tsk=>$id ){
