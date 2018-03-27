@@ -23,25 +23,28 @@
     <center>
       <h1 id="digital-time">...</h1>
 
-        <!-- THIS SCHEDULES IS NOT-WORKING SAMPLES!!! -->
       <?php
 			$rts = true;
 			if( isset($_SESSION['shedules']) ){
 				$tsks = @json_decode( $_SESSION['shedules'] );
     		if( (json_last_error()===JSON_ERROR_NONE) && is_array($tsks)){
-					foreach( $tsks as $tsk=>$id)
-						if( is_array($tsk) )
-							if( isset($tsk['n']) && isset($tsk['t']) ){
-								echo '<div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk'.$id.'">
+		foreach( $tsks as $tsk=>$id)
+			
+		if( is_array($tsk) )
+		if( isset($tsk['n']) && isset($tsk['t']) ){
+		echo '<div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk'.$id.'">
           <p>'.trim(strip_tags($tsk['n'])).' <b>in '.trim(strip_tags($tsk['t'])).'</b></p>
         </div>';
-								$rts = false;
-							}
+		$rts = false;
 				}
+			
 			}
+		
+		}
 			
 			if($rts)
 				echo '
+        <!-- THIS SCHEDULES IS NOT-WORKING SAMPLES!!! -->
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk0">
           <p>Buy big potatos <b>in 12:20</b></p>
         </div>
@@ -59,10 +62,10 @@
       
     <!-- NEEDED SCRIPTS -->  
       
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="common/javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"/>
+    <script src="common/javascript.js"/>
   </body>
 </html>
 
