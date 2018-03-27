@@ -41,7 +41,7 @@
           '.trim(strip_tags($tsk['n'])).' <b>in '.trim(strip_tags($tsk['t'])).'</b>
 	  <div class="button-grey green" onclick="editTaskShow('.$id.')">✎</div>
 	  <div class="button-grey red" onclick="deleteTask('.$id.')">✗</div>
-        </div><div class="alert alert-editor" style="display: none;" role="alert" id="tsk'.$id.'">
+        </div><div class="alert alert-editor" style="display: none;" role="alert" id="tsked'.$id.'">
           <input class="input-text" type="text" placeholder="Task Name">
 	  <input class="input-select" type="time">
 	  <div class="button-grey green" onclick="editTask('.$id.')">✓</div>
