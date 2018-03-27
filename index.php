@@ -22,19 +22,19 @@
     <center>
       <h1 id="digital-time">...</h1>
 
-        <!-- THIS SCHELDULES IS NOT-WORKING EXAMPLES!!! -->
+        <!-- THIS SCHEDULES IS NOT-WORKING SAMPLES!!! -->
       
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          Buy big potatos <b>in 12:20<b>
+          "Buy big potatos "<b>in 12:20<b>
         </div>
 
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          Shopping <3 <b>in 14:30<b>
+          "Shopping <3 "<b>in 14:30<b>
         </div>
 
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          Go to meeting with friends <b>in 16:50<b>
-        </div>        
+          "Go to meeting with friends "<b>in 16:50<b>
+        </div>       
       </center>
       
       
