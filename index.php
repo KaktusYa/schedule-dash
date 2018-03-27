@@ -20,10 +20,12 @@
     <title>Schedule Dash</title>  
   </head>
   <body id="_body">
-   <div class="dropdown">
+   <div class="popdown" id="settings_pop">
   <button class="button-grey settings-button" onclick="toggleSettings()">⚙</button>
-  <div class="dropdown-content">
-    <p>Hello World!</p>
+  <div class="popdown-box" id="settings_box">
+	  <h1> Settings </h1>
+	  <br>Alert when time expires <input class="input-checkbox" id="al_" type="checkbox"><br>
+	  Play alert sound <input class="input-checkbox" id="al_signal" type="checkbox"><br>
   </div>
 </div>
     <center>
