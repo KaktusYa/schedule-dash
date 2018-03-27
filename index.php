@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,16 +22,18 @@
     <center>
       <h1 id="digital-time">...</h1>
 
+        <!-- THIS SCHELDULES IS NOT-WORKING EXAMPLES!!! -->
+      
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          Test alert in 0:00
+          Buy big potatos <b>in 12:20<b>
         </div>
 
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          Test alert in 0:00
+          Shopping <3 <b>in 14:30<b>
         </div>
 
         <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
-          Test alert in 0:00
+          Go to meeting with friends <b>in 16:50<b>
         </div>        
       </center>
       
