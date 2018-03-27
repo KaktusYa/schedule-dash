@@ -20,7 +20,12 @@
     <title>Schedule Dash</title>  
   </head>
   <body id="_body">
-   <button class="button-grey settings-button" onclick="toggleSettings()">⚙</button>
+   <div class="dropdown">
+  <button class="button-grey settings-button" onclick="toggleSettings()">⚙</button>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div>
     <center>
       <h1 id="digital-time">...</h1>
 
