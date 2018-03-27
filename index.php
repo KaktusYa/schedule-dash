@@ -19,7 +19,7 @@
     
     <title>Schedule Dash</title>  
   </head>
-  <body>
+  <body id="_body">
     <center>
       <h1 id="digital-time">...</h1>
 
