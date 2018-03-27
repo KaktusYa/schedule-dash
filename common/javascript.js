@@ -97,7 +97,7 @@ function discardChanges(nid){
 	tid = nid.toString();
 	var th = document.getElementById("tsked" + tid);
 	var ts = document.getElementById("tsk" + tid);
-	th.style.display = "none';
+	th.style.display = "none";
 	ts.style.display = "block";
 	th.children[0].value = th.n;
 	th.children[1].value = th.t;
@@ -110,7 +110,7 @@ function editTask(nid){
 	th.n = th.children[0].value; //Edit1 value
 	th.t = th.children[1].value; //Time1 value
 	document.getElementById("tsk" + tid).innerHtml = "<p>" + th.n + " <b>in " + th.t + "</b></p>";
-	th.style.display = "none';
+	th.style.display = "none";
 	ts.style.display = "block";
 	updSession();
 }
