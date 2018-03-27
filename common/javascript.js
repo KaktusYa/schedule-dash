@@ -35,33 +35,90 @@ function addTask(){
 		arr.forEach(function(it, i, arr){
 			vals[] = parseint(it.id.slice(3));
 		});
-		ntm = Math.max.apply(null, [1,3,5,-1,8,0]) + 1;
+		ntm = Math.max.apply(null, vals) + 1;
 	}
 	var tsk = document.createElement("div"), tsked = document.createElement("div");
+	var edit = document.createElement("input"), select = document.createElement("input");
+	
+	//task block
 	tsk.setAttribute("class", "alert alert-primary");
-	tsked.setAttribute("class", "alert alert-editor");
 	tsk.id = "tsk" + ntm.toString();
+	
+	//editor
+	tsked.setAttribute("class", "alert alert-editor");
+	edit.setAttribute("type", "text");
+	edit.setAttribute("class", "input-text");
+	edit.setAttribute("placeholder", "Task Name");
+	select.setAttribute("type", "time");
+	select.setAttribute("class", "input-select");
 	tsked.id = "tsked" + ntm.toString();
-	tsked.n = "Unspecified";
-	tsked.t = "24:00";
+	tsked.n = edit.value = "Unspecified";
+	tsked.t = select.value = "24:00";
+	tsked.appendChild(edit);
+	tsked.appendChild(select);
+	
+	//buttons
+	var EdSh = document.createElement("button"), DlTs = document.createElement("button"),
+	    EdTs = document.createElement("button"), DiCh = document.createElement("button");
+	//buttons styles
+	EdSh.setAttribute("class", "button-grey");
+	DlTs.setAttribute("class", "button-grey red");
+	EdTs.setAttribute("class", "button-grey green");
+	DiCh.setAttribute("class", "button-grey red");
+	
+	//buttons text
+	EdSh.innerHtml = "✎";
+	DlTs.innerHtml = "✗";
+	EdTs.innerHtml = "✓";
+	DiCh.innerHtml = "✗";
+	
+	//buttons events
+	EdSh.addEventListener("click", function(){editTaskShow(ntm);});
+	DlTs.addEventListener("click", function(){deleteTask(ntm);});
+	EdTs.addEventListener("click", function(){editTask(ntm);});
+	DiCh.addEventListener("click", function(){discardChanges(ntm);});
+	
 	document.getElementById("_body").appendChild(tsk);
 	document.getElementById("_body").appendChild(tsked);
 	document.getElementById("_body").insertBefore(tsked, document.getElementById("add_box"));
 	document.getElementById("_body").insertBefore(tsk, tsked);
+	
 	tsk.innerHtml = "<p>" + tsked.n + " <b>in " + tsked.t + "</b></p>";
 }
 
-function editTask(){
-	var th = document.getElementById("tsked" + this.id.slice(2)); //id = ed(i) [ed1, ed2, etc]
-	th.n = th.children[0].value; //Edit 1 value
-	th.t = th.children[1].value + ":" + th.children[2].value; //Combobox1 + combobox2 values
-	document.getElementById("tsk" + this.id.slice(2)).innerHtml = "<p>" + th.n + " <b>in " + th.t + "</b></p>";
+function editTaskShow(nid){
+	var tid = nid.toString();
+	var th = document.getElementById("tsked" + tid);
+	var ts = document.getElementById("tsk" + tid);
+	th.style.display = "block';
+	ts.style.display = "none";
+}
+function discardChanges(nid){
+	tid = nid.toString();
+	var th = document.getElementById("tsked" + tid);
+	var ts = document.getElementById("tsk" + tid);
+	th.style.display = "none';
+	ts.style.display = "block";
+	th.children[0].value = th.n;
+	th.children[1].value = th.t;
+	updSession();
+}
+function editTask(nid){
+	var tid = nid.toString();
+	var th = document.getElementById("tsked" + tid);
+	var ts = document.getElementById("tsk" + tid);
+	th.n = th.children[0].value; //Edit1 value
+	th.t = th.children[1].value; //Time1 value
+	document.getElementById("tsk" + tid).innerHtml = "<p>" + th.n + " <b>in " + th.t + "</b></p>";
+	th.style.display = "none';
+	ts.style.display = "block";
+	updSession();
 }
 
-function deleteTask(){
-	document.getElementById( "tsk" + this.id.slice(2) ).remove();   //id = dt(i) [dt1, dt2, etc].
-	document.getElementById( "tsked" + this.id.slice(2) ).remove();
-	this.remove();
+function deleteTask(nid){
+	var tid = nid.toString();
+	document.getElementById( "tsk" + tid).remove();
+	document.getElementById( "tsked" + tid).remove();
 	updSession();
 }
 setInterval(getCurrentTime, 1000);
