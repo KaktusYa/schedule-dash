@@ -3,7 +3,7 @@
   <head>
  <link rel="stylesheet" href="themes/lamps-theme.css">   
     <?php
-            echo "<style>\r\n body {\r\n  background-image: url(\"".(["lamps", "lake"][rand(0,1)])."-theme.jpg\");\r\n }\r\n</style>";
+            echo "<style>\r\n body {\r\n  background: #ffffff url(\"".(["lamps", "lake"][rand(0,1)])."-theme.jpg\") no-repeat right top fixed;\r\n    background-size: 100% 100%;\r\n }\r\n</style>";
     ?>  
       
     <!-- META TAGS, AND MORE... -->  
