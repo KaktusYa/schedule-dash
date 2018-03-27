@@ -26,7 +26,7 @@
     
     <title>Schedule Dash</title>  
   </head>
-  <body style="margin: 20px;">
+  <body>
     <center>
       <h1 id="digital-time">...</h1>
 
