@@ -90,7 +90,7 @@ function editTaskShow(nid){
 	var tid = nid.toString();
 	var th = document.getElementById("tsked" + tid);
 	var ts = document.getElementById("tsk" + tid);
-	th.style.display = "block';
+	th.style.display = "block";
 	ts.style.display = "none";
 }
 function discardChanges(nid){
