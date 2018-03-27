@@ -42,8 +42,8 @@
 	  <button class="button-grey green" onclick="editTaskShow('.$id.')">✎</button>
 	  <button class="button-grey red" onclick="deleteTask('.$id.')">✗</button>
         </div><div class="alert alert-editor" style="display: none;" role="alert" id="tsked'.$id.'">
-          <input class="input-text" type="text" placeholder="Task Name">
-	  <input class="input-select" type="time">
+          <input class="input-text" type="text" placeholder="Task Name" value="'.$tsk['n'].'"></input>
+	  <input class="input-select" type="time" value="'.$tsk['t'].'"></input>
 	  <button class="button-grey green" onclick="editTask('.$id.')">✓</button>
 	  <button class="button-grey red" onclick="discardChanges('.$id.')">✗</button>
         </div>';
