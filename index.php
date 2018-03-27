@@ -1,21 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
+ <link rel="stylesheet" href="themes/lamps-theme.css">   
     <?php
-    
-            $randomThemeInt = rand(1, 2);
-
-            switch($randomThemeInt) {
-                case 1:
-                    echo '<link rel="stylesheet" href="themes/lamps-theme.css">'; //theme 1..
-                break;
-
-                case 2:
-                    echo '<link rel="stylesheet" href="themes/lamps-theme.css">'; //theme 2..
-                break;
-            }
-      
+            echo "<style>\r\n body {\r\n  background-image: url(\"".(["lamps", "lake"][rand(0,1)])."-theme.jpg\");\r\n }\r\n</style>";
     ?>  
       
     <!-- META TAGS, AND MORE... -->  
