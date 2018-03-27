@@ -29,10 +29,10 @@
 			if( isset($_SESSION['shedules']) ){
 				$tsks = @json_decode( $_SESSION['shedules'] );
     		if( (json_last_error()===JSON_ERROR_NONE) && is_array($tsks)){
-					foreach( $tsks as $tsk)
+					foreach( $tsks as $tsk=>$id)
 						if( is_array($tsk) )
 							if( isset($tsk['n']) && isset($tsk['t']) ){
-								echo '<div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+								echo '<div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk'.$id.'">
           <p>'.trim(strip_tags($tsk['n'])).' <b>in '.trim(strip_tags($tsk['t'])).'</b></p>
         </div>';
 								$rts = false;
@@ -42,15 +42,15 @@
 			
 			if($rts)
 				echo '
-        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk0">
           <p>Buy big potatos <b>in 12:20</b></p>
         </div>
 
-        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk1">
           <p>Shopping &lt;3 <b>in 14:30</b></p>
         </div>
 
-        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert">
+        <div class="alert alert-primary" style="width: 60%; text-align: left;" role="alert" id="tsk2">
             <p>Go to meeting with friends <b>in 16:50</b></p>
         </div>';
 							?>
