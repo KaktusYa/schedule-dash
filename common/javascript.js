@@ -23,8 +23,9 @@ function updSession(){
 			data[ parseint( it.id.slice(3) ) ]["t"] = document.getElementById("tsked" + it.id.slice(3)).t;
 		});
 	}
-	req.open("POST", "save_schedules.php?content=" + JSON.stringify(data), true);				
-	req.send();
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "save_schedules.php", true);				
+	xhttp.send("content=" + JSON.stringify(data));
 }
 
 function addTask(){
@@ -121,4 +122,17 @@ function deleteTask(nid){
 	document.getElementById( "tsked" + tid).remove();
 	updSession();
 }
+
+function getSettings()
+{
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+  	if (this.readyState == 4 && this.status == 200) {
+ 	   return JSON.parse( this.responseText );
+	  }
+	};
+	xhttp.open("GET", "get_settings.php", true);
+	xhttp.send();
+}
+
 setInterval(getCurrentTime, 1000);
