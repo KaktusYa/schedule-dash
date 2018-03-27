@@ -45,7 +45,7 @@ function addTask(){
 	tsked.t = "24:00";
 	document.getElementById("_body").appendChild(tsk);
 	document.getElementById("_body").appendChild(tsked);
-	document.getElementById("_body").insertBefore(tsked, this);
+	document.getElementById("_body").insertBefore(tsked, document.getElementById("add_box"));
 	document.getElementById("_body").insertBefore(tsk, tsked);
 	tsk.innerHtml = "<p>" + tsked.n + " <b>in " + tsked.t + "</b></p>";
 }
