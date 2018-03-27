@@ -1,2 +1,4 @@
 # schedule-dash
-A simple web dashboard. Show time, and your schedule. Additional functions are planned...
+A simple web dashboard.
+<br>It only shows your time and schedules.
+<br><br> *Additional functions will be realized as soon as possible.*

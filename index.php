@@ -1,21 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
+ <link rel="stylesheet" href="themes/lamps-theme.css">   
     <?php
-    
-            $randomThemeInt = rand(1, 2);
-
-            switch($randomThemeInt) {
-                case 1:
-                    echo '<link rel="stylesheet" href="themes/lamps-theme.css">'; //theme 1..
-                break;
-
-                case 2:
-                    echo '<link rel="stylesheet" href="themes/lamps-theme.css">'; //theme 2..
-                break;
-            }
-      
+    foreach( new DirectoryIterator('themes') as $t ){
+      if(in_array( strtolower($t->getExtension()), ["jpg", "jpeg", "png", "svg"] )) $bg[] = $t->getPath();
+    }
+            echo "<style>\r\n body {\r\n  background: #ffffff url(\"themes/".($bg[array_rand($bg)])."\") no-repeat right top fixed;\r\n    background-size: 100% 100%;\r\n }\r\n</style>";
     ?>  
       
     <!-- META TAGS, AND MORE... -->  
