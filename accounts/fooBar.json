@@ -1,0 +1,17 @@
+{
+    "fstName": "John",
+    "sndName": "Grachevsky",
+    "passwordMd5": "098f6bcd4621d373cade4e832627b4f6", /* test */
+    "schedule1": {
+        "text": "Buy big potatos",
+        "time": "12:30",
+    },
+    "schedule2": {
+        "text": "Make a homework",
+        "time": "16:20",
+    },
+    "schedule3": {
+        "text": "Coding..., coding..., coding...",
+        "time": "19:15",
+    },
+}

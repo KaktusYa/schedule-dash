@@ -1,7 +1,5 @@
 function getCurrentTime()
 {
-
-	//connect class
 	var main = new Date();
 
 	var hours = main.getHours();
